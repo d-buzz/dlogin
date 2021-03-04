@@ -19,7 +19,7 @@ const useStyles = createUseStyles({
     marginTop: 10,
   },
   tokens: {
-    height: 100,
+    minHeight: 100,
     marginTop: 10,
   },
 })
