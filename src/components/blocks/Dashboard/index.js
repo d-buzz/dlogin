@@ -3,10 +3,14 @@ import Paper from '@material-ui/core/Paper'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 
+import BatteryFullIcon from '@material-ui/icons/BatteryFull'
+import HowToVoteIcon from '@material-ui/icons/HowToVote'
+
 import { HiveIcon } from 'components'
 
 import {createUseStyles} from 'react-jss'
 import classNames from 'classnames'
+
 
 const useStyles = createUseStyles({
   root: {
@@ -18,7 +22,7 @@ const useStyles = createUseStyles({
     margin: '0 auto',
   },
   resource: {
-    height: 50,
+    height: 55,
     marginTop: 10,
   },
   main: {
@@ -37,6 +41,8 @@ const useStyles = createUseStyles({
   },
 })
 
+const resourceIcons = { fontSize: 15 }
+
 
 const Dashboard = () => {
 
@@ -49,11 +55,17 @@ const Dashboard = () => {
           <Grid item xs={12}>
             <Grid container spacing={2}>
               <Grid xs={6} item>
-                <Typography variant="body" className={classes.gridText}>Voting Power</Typography> <br />
-                <Typography variant="subtitle2" className={classes.gridText}><b>25.70 %</b></Typography>
+                <Typography variant="body" className={classes.gridText}>
+                   <HowToVoteIcon style={resourceIcons} fontSize="small" /> Voting Power
+                </Typography> <br />
+                <Typography variant="subtitle2" className={classes.gridText}>
+                  <b>25.70 %</b>
+                </Typography>
               </Grid>
               <Grid xs={6} item>
-                <Typography variant="body" className={classes.gridText}>Resource Credits</Typography> <br />
+                <Typography variant="body" className={classes.gridText}>
+                  <BatteryFullIcon style={resourceIcons} fontSize="small"  />  Resource Credits
+                </Typography> <br />
                 <Typography variant="subtitle2" className={classes.gridText}><b>100 %</b></Typography>
               </Grid>
             </Grid>
