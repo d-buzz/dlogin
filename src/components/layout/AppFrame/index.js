@@ -5,9 +5,9 @@ import {createUseStyles} from 'react-jss'
 
 const useStyles = createUseStyles({
   container: {
-    width: 380,
-    minHeight: 550,
-    maxHeight: 600,
+    width: 350,
+    minHeight: 590,
+    maxHeight: 620,
     backgroundColor: 'whitesmoke',
     overFlow: 'scrollY',
   },
