@@ -39,6 +39,9 @@ const useStyles = createUseStyles({
   hiveIcon: {
     marginTop: 20,
   },
+  verticalSpacing: {
+    paddingTop: 5,
+  },
 })
 
 const resourceIcons = { fontSize: 15 }
@@ -75,9 +78,9 @@ const Dashboard = () => {
       <Paper className={classNames(classes.main, classes.paper)} elevation={1}>
         <center>
           <HiveIcon className={classes.hiveIcon} height={30} />
-          <Typography variant="h5">400 HIVE</Typography>
-          <Typography variant="subtitle1">≈ 132 USD</Typography>
-          <Typography variant="subtitle2"><b>@ Coffeebender</b></Typography>
+          <Typography className={classes.verticalSpacing} variant="h5">400 HIVE</Typography>
+          <Typography className={classes.verticalSpacing} variant="subtitle1">≈ 132 USD</Typography>
+          <Typography className={classes.verticalSpacing} variant="subtitle2"><b>@ Coffeebender</b></Typography>
         </center>
       </Paper>
       <Paper className={classNames(classes.tokens, classes.paper)} elevation={1}></Paper>
