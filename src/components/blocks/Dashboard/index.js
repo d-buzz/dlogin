@@ -49,17 +49,23 @@ const Dashboard = () => {
           <Grid item xs={12}>
             <Grid container spacing={2}>
               <Grid xs={6} item>
-                <Typography variant="body" className={classes.gridText}>Voting Power</Typography>
+                <Typography variant="body" className={classes.gridText}>Voting Power</Typography> <br />
+                <Typography variant="subtitle2" className={classes.gridText}><b>25.70 %</b></Typography>
               </Grid>
               <Grid xs={6} item>
-                <Typography variant="body" className={classes.gridText}>Resource Credits</Typography>
+                <Typography variant="body" className={classes.gridText}>Resource Credits</Typography> <br />
+                <Typography variant="subtitle2" className={classes.gridText}><b>100 %</b></Typography>
               </Grid>
             </Grid>
           </Grid>
         </Grid>
       </Paper>
       <Paper className={classNames(classes.main, classes.paper)} elevation={1}>
-        <center><HiveIcon className={classes.hiveIcon} height={35} /></center>
+        <center>
+          <HiveIcon className={classes.hiveIcon} height={30} />
+          <Typography variant="h5">400 HIVE</Typography>
+          <Typography variant="subtitle2"><b>@ Coffeebender</b></Typography>
+        </center>
       </Paper>
       <Paper className={classNames(classes.tokens, classes.paper)} elevation={1}></Paper>
     </React.Fragment>
