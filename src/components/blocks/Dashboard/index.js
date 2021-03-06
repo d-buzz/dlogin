@@ -76,6 +76,7 @@ const Dashboard = () => {
         <center>
           <HiveIcon className={classes.hiveIcon} height={30} />
           <Typography variant="h5">400 HIVE</Typography>
+          <Typography variant="subtitle1">≈ 132 USD</Typography>
           <Typography variant="subtitle2"><b>@ Coffeebender</b></Typography>
         </center>
       </Paper>
