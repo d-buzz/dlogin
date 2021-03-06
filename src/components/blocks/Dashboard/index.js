@@ -2,9 +2,11 @@ import React from 'react'
 import Paper from '@material-ui/core/Paper'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
+import IconButton from '@material-ui/core/IconButton'
 
 import BatteryFullIcon from '@material-ui/icons/BatteryFull'
 import HowToVoteIcon from '@material-ui/icons/HowToVote'
+import SendIcon from '@material-ui/icons/Send'
 
 import { HiveIcon } from 'components'
 
@@ -42,6 +44,12 @@ const useStyles = createUseStyles({
   verticalSpacing: {
     paddingTop: 5,
   },
+  iconButton: {
+    backgroundColor: '#1976d2 !important',
+  },
+  actionIcons: {
+    color: 'white',
+  },
 })
 
 const resourceIcons = { fontSize: 15 }
@@ -78,8 +86,8 @@ const Dashboard = () => {
       <Paper className={classNames(classes.main, classes.paper)} elevation={1}>
         <center>
           <HiveIcon className={classes.hiveIcon} height={30} />
-          <Typography className={classes.verticalSpacing} variant="h5">400 HIVE</Typography>
-          <Typography className={classes.verticalSpacing} variant="subtitle1">≈ 132 USD</Typography>
+          <Typography className={classes.verticalSpacing} variant="h5">422.973 HIVE</Typography>
+          <Typography className={classes.verticalSpacing} variant="subtitle1">$ 120.75 USD</Typography>
           <Typography className={classes.verticalSpacing} variant="subtitle2"><b>@ Coffeebender</b></Typography>
         </center>
       </Paper>
