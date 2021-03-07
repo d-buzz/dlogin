@@ -31,7 +31,7 @@ const useStyles = createUseStyles({
     marginTop: 15,
   },
   main: {
-    height: 250,
+    height: 240,
     marginTop: 10,
   },
   estimate: {
