@@ -25,7 +25,7 @@ const useStyles = createUseStyles({
   },
   resource: {
     height: 55,
-    marginTop: 10,
+    marginTop: 15,
   },
   main: {
     height: 350,
@@ -50,6 +50,9 @@ const useStyles = createUseStyles({
   actionIcons: {
     color: 'white',
   },
+  assetAmount: {
+    fontFamily: "'Roboto Condensed', sans-serif !important",
+  },
 })
 
 const resourceIcons = { fontSize: 15 }
@@ -73,7 +76,7 @@ const Dashboard = () => {
                   <b>25.70 %</b>
                 </Typography>
               </Grid>
-              <Grid xs={6} item>
+              <Grid xs={6} item>  
                 <Typography variant="body" className={classes.gridText}>
                   <BatteryFullIcon style={resourceIcons} fontSize="small"  />  Resource Credits
                 </Typography> <br />
@@ -86,8 +89,8 @@ const Dashboard = () => {
       <Paper className={classNames(classes.main, classes.paper)} elevation={1}>
         <center>
           <HiveIcon className={classes.hiveIcon} height={30} />
-          <Typography className={classes.verticalSpacing} variant="h5">422.973 HIVE</Typography>
-          <Typography className={classes.verticalSpacing} variant="subtitle1">$ 120.75 USD</Typography>
+          <Typography className={classNames(classes.verticalSpacing, classes.assetAmount)} variant="h5" component="p">422.973 HIVE</Typography>
+          <Typography className={classes.verticalSpacing} variant="subtitle1" component="p">$ 120.75 USD</Typography>
           <Typography className={classes.verticalSpacing} variant="subtitle2"><b>@ Coffeebender</b></Typography>
         </center>
       </Paper>
