@@ -3,7 +3,6 @@ import Paper from '@material-ui/core/Paper'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
-import Chip from '@material-ui/core/Chip'
 
 import BatteryFullIcon from '@material-ui/icons/BatteryFull'
 import HowToVoteIcon from '@material-ui/icons/HowToVote'
