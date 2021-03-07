@@ -68,7 +68,10 @@ const useStyles = createUseStyles({
   },
 })
 
+// style compromise
 const resourceIcons = { fontSize: 15 }
+const roundedButton = { borderRadius: 25 }
+const buttonMargin = { marginLeft: 10 }
 
 
 const Dashboard = () => {
@@ -117,8 +120,7 @@ const Dashboard = () => {
           </Typography>
           <Separator height={15} />
           <Button 
-            buttonStyle={{ borderRadius: 25 }}
-            style={{ borderRadius: 25 }}
+            style={roundedButton}
             variant="outlined"
             color="secondary"
             startIcon={<SendIcon />}
@@ -127,8 +129,7 @@ const Dashboard = () => {
             Send
           </Button> 
           <Button 
-            buttonStyle={{ borderRadius: 25 }}
-            style={{ borderRadius: 25, marginLeft: 10 }}
+            style={{...roundedButton, ...buttonMargin}}
             variant="outlined"
             color="secondary"
             startIcon={<PublishIcon />}
@@ -137,8 +138,7 @@ const Dashboard = () => {
             Power Up
           </Button>
           <Button 
-            buttonStyle={{ borderRadius: 25 }}
-            style={{ borderRadius: 25, marginLeft: 10 }}
+            style={{...roundedButton, ...buttonMargin}}
             variant="outlined"
             color="secondary"
             startIcon={<ShoppingCartIcon />}
