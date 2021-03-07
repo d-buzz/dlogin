@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Paper from '@material-ui/core/Paper'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 import Chip from '@material-ui/core/Chip'
+import Tabs from '@material-ui/core/Tabs'
+import Tab from '@material-ui/core/Tab'
+import ListItem from '@material-ui/core/ListItem'
+import ListItemText from '@material-ui/core/ListItemText'
+import ListItemIcon from '@material-ui/core/ListItemIcon'
+import NavigateNextIcon from '@material-ui/icons/NavigateNext'
 
 import BatteryFullIcon from '@material-ui/icons/BatteryFull'
 import HowToVoteIcon from '@material-ui/icons/HowToVote'
@@ -16,7 +22,6 @@ import { HiveIcon, Separator } from 'components'
 
 import { createUseStyles } from 'react-jss'
 import classNames from 'classnames'
-
 
 const useStyles = createUseStyles({
   root: {
@@ -32,7 +37,7 @@ const useStyles = createUseStyles({
     marginTop: 15,
   },
   main: {
-    height: 240,
+    height: 225,
     marginTop: 10,
   },
   estimate: {
@@ -40,7 +45,8 @@ const useStyles = createUseStyles({
     marginTop: 10,
   },
   assets: {
-    
+    minHeight: 120,
+    marginTop: 10,
   },
   gridText: {
     paddingLeft: 10,
@@ -77,6 +83,7 @@ const buttonMargin = { marginLeft: 10 }
 const Dashboard = () => {
 
   const classes = useStyles()
+  const [tabValue, setTabValue] = useState(0)
 
   return (
     <React.Fragment>
@@ -169,6 +176,41 @@ const Dashboard = () => {
             422.973 HIVE + 400 HP + 3 HBD
           </Typography>
         </center>
+      </Paper>
+      <Paper className={classNames(classes.assets, classes.paper)} elevation={0}>
+        <Tabs
+          value={tabValue}
+          indicatorColor="secondary"
+          textColor="primary"
+          centered
+        >
+          <Tab 
+            label={(
+              <Typography variant="subtitle2" style={{ color: 'black' }}>
+                <b>Assets</b>
+              </Typography>
+            )} 
+          />
+          <Tab 
+            label={(
+              <Typography variant="subtitle2" style={{ color: 'black' }}>
+                <b>History</b>
+              </Typography>
+            )} 
+          />
+        </Tabs>
+        <Separator height={5} />
+        <ListItem button>
+          <ListItemText primary={(
+            <Typography variant="subtitle2" style={{ color: 'black' }}>
+              HIVE POWER <br /> <b>430 HP</b>
+            </Typography>
+          )} />
+          <ListItemIcon>
+            <NavigateNextIcon edge="start" />
+          </ListItemIcon>
+        </ListItem>
+        <Separator height={10} />
       </Paper>
       <Separator height={5} />
     </React.Fragment>
