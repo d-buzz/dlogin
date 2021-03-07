@@ -30,7 +30,7 @@ const useStyles = createUseStyles({
     marginTop: 15,
   },
   main: {
-    height: 350,
+    height: 250,
     marginTop: 10,
   },
   tokens: {
@@ -72,15 +72,15 @@ const Dashboard = () => {
             <Grid container spacing={2}>
               <Grid xs={6} item>
                 <Typography variant="body" className={classes.gridText}>
-                   <HowToVoteIcon style={resourceIcons} fontSize="small" /> Voting Power
+                   <HowToVoteIcon style={resourceIcons} fontSize="small"/>Voting Power
                 </Typography> <br />
                 <Typography variant="subtitle2" className={classes.gridText}>
-                  <b>25.70 %</b>
+                  <b>25.70 %</b>&nbsp;($0.20)
                 </Typography>
               </Grid>
               <Grid xs={6} item>  
                 <Typography variant="body" className={classes.gridText}>
-                  <BatteryFullIcon style={resourceIcons} fontSize="small"  />  Resource Credits
+                  <BatteryFullIcon style={resourceIcons} fontSize="small"/>Resource Credits
                 </Typography> <br />
                 <Typography variant="subtitle2" className={classes.gridText}><b>100 %</b></Typography>
               </Grid>
