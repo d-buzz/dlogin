@@ -3,6 +3,7 @@ import Paper from '@material-ui/core/Paper'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
+import Chip from '@material-ui/core/Chip'
 
 import BatteryFullIcon from '@material-ui/icons/BatteryFull'
 import HowToVoteIcon from '@material-ui/icons/HowToVote'
@@ -13,8 +14,9 @@ import PublishIcon from '@material-ui/icons/Publish'
 
 import { HiveIcon, Separator } from 'components'
 
-import {createUseStyles} from 'react-jss'
+import { createUseStyles } from 'react-jss'
 import classNames from 'classnames'
+
 
 const useStyles = createUseStyles({
   root: {
@@ -26,15 +28,15 @@ const useStyles = createUseStyles({
     margin: '0 auto',
   },
   resource: {
-    height: 55,
+    height: 60,
     marginTop: 15,
   },
   main: {
     height: 250,
     marginTop: 10,
   },
-  tokens: {
-    minHeight: 100,
+  estimate: {
+    minHeight: 75,
     marginTop: 10,
   },
   gridText: {
@@ -55,6 +57,12 @@ const useStyles = createUseStyles({
   assetAmount: {
     fontFamily: "'Roboto Condensed', sans-serif !important",
   },
+  votingStat: {
+    marginLeft: '17px !important',
+  },
+  resourceStat: {
+    marginLeft: '15px !important',
+  },
 })
 
 const resourceIcons = { fontSize: 15 }
@@ -72,17 +80,21 @@ const Dashboard = () => {
             <Grid container spacing={2}>
               <Grid xs={6} item>
                 <Typography variant="body" className={classes.gridText}>
-                   <HowToVoteIcon style={resourceIcons} fontSize="small"/>Voting Power
+                   <HowToVoteIcon style={resourceIcons} fontSize="small"/>
+                   <b>Voting Power</b>
                 </Typography> <br />
-                <Typography variant="subtitle2" className={classes.gridText}>
-                  <b>25.70 %</b>&nbsp;($0.20)
+                <Typography variant="subtitle2" className={classNames(classes.gridText, classes.votingStat)}>
+                  25.70 %
                 </Typography>
               </Grid>
               <Grid xs={6} item>  
                 <Typography variant="body" className={classes.gridText}>
-                  <BatteryFullIcon style={resourceIcons} fontSize="small"/>Resource Credits
+                  <BatteryFullIcon style={resourceIcons} fontSize="small"/>
+                  <b>Resource Credits</b>
                 </Typography> <br />
-                <Typography variant="subtitle2" className={classes.gridText}><b>100 %</b></Typography>
+                <Typography variant="subtitle2" className={classNames(classes.gridText, classes.resourceStat)}>
+                  100 %
+                </Typography>
               </Grid>
             </Grid>
           </Grid>
@@ -133,7 +145,20 @@ const Dashboard = () => {
           </Button>
         </center>
       </Paper>
-      <Paper className={classNames(classes.tokens, classes.paper)} elevation={0}></Paper>
+      <Paper className={classNames(classes.estimate, classes.paper)} elevation={0}>
+        <center>
+          <Separator height={5} />
+          <Typography variant="subtitle2">
+            <b>Estimated Account Value</b>
+          </Typography>
+          <Typography variant="subtitle2">
+            $ 127.23 USD
+          </Typography>
+          <Typography variant="body2">
+            422.973 HIVE + 400 HP + 3 HBD
+          </Typography>
+        </center>
+      </Paper>
       <Separator height={5} />
     </React.Fragment>
   )
