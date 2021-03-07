@@ -12,14 +12,14 @@ const useStyles = createUseStyles({
   },
 })
 
-
+const appBarBg = { backgroundColor: '#dc3545' }
 
 const AppBar = () => {
   const classes = useStyles()
 
   return (
     <React.Fragment>
-      <MuiAppBar elevation={0} position="sticky" color="secondary">
+      <MuiAppBar style={appBarBg} elevation={0} position="sticky" color="secondary">
         <Toolbar>
           <Typography variant="subtitle2" className={classes.title}>
             <b>DLOGIN</b>
