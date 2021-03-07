@@ -8,7 +8,7 @@ import BatteryFullIcon from '@material-ui/icons/BatteryFull'
 import HowToVoteIcon from '@material-ui/icons/HowToVote'
 import SendIcon from '@material-ui/icons/Send'
 
-import { HiveIcon } from 'components'
+import { HiveIcon, Separator } from 'components'
 
 import {createUseStyles} from 'react-jss'
 import classNames from 'classnames'
@@ -88,13 +88,20 @@ const Dashboard = () => {
       </Paper>
       <Paper className={classNames(classes.main, classes.paper)} elevation={1}>
         <center>
-          <HiveIcon className={classes.hiveIcon} height={30} />
-          <Typography className={classNames(classes.verticalSpacing, classes.assetAmount)} variant="h5" component="p">422.973 HIVE</Typography>
-          <Typography className={classes.verticalSpacing} variant="subtitle1" component="p">$ 120.75 USD</Typography>
-          <Typography className={classes.verticalSpacing} variant="subtitle2"><b>@ Coffeebender</b></Typography>
+          <HiveIcon className={classes.hiveIcon} height={35} />
+          <Typography className={classNames(classes.verticalSpacing, classes.assetAmount)} variant="h4" component="p">
+            422.973 HIVE
+          </Typography>
+          <Typography className={classes.verticalSpacing} variant="subtitle1" component="p">
+            $ 120.75 USD
+          </Typography>
+          <Typography className={classes.verticalSpacing} variant="subtitle2">
+            <b>@coffeebender</b>
+          </Typography>
         </center>
       </Paper>
       <Paper className={classNames(classes.tokens, classes.paper)} elevation={1}></Paper>
+      <Separator height={5} />
     </React.Fragment>
   )
 }

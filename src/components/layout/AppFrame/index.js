@@ -8,7 +8,7 @@ const useStyles = createUseStyles({
     width: 350,
     minHeight: 590,
     maxHeight: 620,
-    backgroundColor: 'whitesmoke',
+    backgroundColor: '#242526',
     overFlow: 'scrollY',
   },
 })
