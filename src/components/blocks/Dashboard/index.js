@@ -2,18 +2,19 @@ import React from 'react'
 import Paper from '@material-ui/core/Paper'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
+import Button from '@material-ui/core/Button'
 
 import BatteryFullIcon from '@material-ui/icons/BatteryFull'
 import HowToVoteIcon from '@material-ui/icons/HowToVote'
+
 import SendIcon from '@material-ui/icons/Send'
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart'
+import PublishIcon from '@material-ui/icons/Publish'
 
 import { HiveIcon, Separator } from 'components'
 
 import {createUseStyles} from 'react-jss'
 import classNames from 'classnames'
-
-import PropTypes from 'prop-types'
-
 
 const useStyles = createUseStyles({
   root: {
@@ -99,6 +100,37 @@ const Dashboard = () => {
           <Typography className={classes.verticalSpacing} variant="subtitle2">
             <b>@coffeebender</b>
           </Typography>
+          <Separator height={15} />
+          <Button 
+            buttonStyle={{ borderRadius: 25 }}
+            style={{ borderRadius: 25 }}
+            variant="outlined"
+            color="secondary"
+            startIcon={<SendIcon />}
+            size="small"
+          >
+            Send
+          </Button> 
+          <Button 
+            buttonStyle={{ borderRadius: 25 }}
+            style={{ borderRadius: 25, marginLeft: 10 }}
+            variant="outlined"
+            color="secondary"
+            startIcon={<PublishIcon />}
+            size="small"
+          >
+            Power Up
+          </Button>
+          <Button 
+            buttonStyle={{ borderRadius: 25 }}
+            style={{ borderRadius: 25, marginLeft: 10 }}
+            variant="outlined"
+            color="secondary"
+            startIcon={<ShoppingCartIcon />}
+            size="small"
+          >
+            Buy
+          </Button>
         </center>
       </Paper>
       <Paper className={classNames(classes.tokens, classes.paper)} elevation={0}></Paper>
