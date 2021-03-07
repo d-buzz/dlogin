@@ -5,6 +5,7 @@ import Typography from '@material-ui/core/Typography'
 import Avatar from '@material-ui/core/Avatar'
 
 import {createUseStyles} from 'react-jss'
+import PropTypes from 'prop-types'
 
 const useStyles = createUseStyles({
   title: {
@@ -30,5 +31,6 @@ const AppBar = () => {
     </React.Fragment>
   )
 }
+
 
 export default AppBar

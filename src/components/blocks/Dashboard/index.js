@@ -12,6 +12,8 @@ import { HiveIcon, Separator } from 'components'
 import {createUseStyles} from 'react-jss'
 import classNames from 'classnames'
 
+import PropTypes from 'prop-types'
+
 
 const useStyles = createUseStyles({
   root: {
@@ -63,7 +65,7 @@ const Dashboard = () => {
 
   return (
     <React.Fragment>
-      <Paper className={classNames(classes.resource, classes.paper)} elevation={1}>
+      <Paper className={classNames(classes.resource, classes.paper)} elevation={0}>
         <Grid container className={classes.root} spacing={2}>
           <Grid item xs={12}>
             <Grid container spacing={2}>
@@ -85,7 +87,7 @@ const Dashboard = () => {
           </Grid>
         </Grid>
       </Paper>
-      <Paper className={classNames(classes.main, classes.paper)} elevation={1}>
+      <Paper className={classNames(classes.main, classes.paper)} elevation={0}>
         <center>
           <HiveIcon className={classes.hiveIcon} height={35} />
           <Typography className={classNames(classes.verticalSpacing, classes.assetAmount)} variant="h4" component="p">
@@ -99,10 +101,11 @@ const Dashboard = () => {
           </Typography>
         </center>
       </Paper>
-      <Paper className={classNames(classes.tokens, classes.paper)} elevation={1}></Paper>
+      <Paper className={classNames(classes.tokens, classes.paper)} elevation={0}></Paper>
       <Separator height={5} />
     </React.Fragment>
   )
 }
+
 
 export default Dashboard
